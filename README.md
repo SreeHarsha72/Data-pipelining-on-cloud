@@ -59,7 +59,7 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
 
    3.3 Mart Models:
    - Applied business logic for aggregation and transformation.
-   - - Built fact tables using dimensional modeling principles.
+   - Built fact tables using dimensional modeling principles.
 
    3.4 Testing Framework
    - Generic Tests:
@@ -69,6 +69,7 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
      - Verified custom business rules, such as ensuring non-negative discounts and valid date ranges.
 
 <br/>
+
 ## Orchestration
 
 - Airflow DAG:
