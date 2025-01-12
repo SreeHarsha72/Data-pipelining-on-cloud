@@ -9,7 +9,10 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
 - **ETL** (Extract, Transform, Load): Historically optimized for high storage costs by transforming data before loading it into the data warehouse.
 - **ELT** (Extract, Load, Transform): Modern approach enabled by cost-effective storage solutions like Snowflake, allowing raw data to be loaded first and transformed later.
 
+## Data Used
 
+- TPC-H is a decision support benchmark. It consists of a suite of business-oriented ad hoc queries and concurrent data modifications. https://docs.snowflake.com/en/user-guide/sample-data-tpch
+  
 ## Tools Used
 
 - **Snowflake**: Cloud-based data warehousing.
