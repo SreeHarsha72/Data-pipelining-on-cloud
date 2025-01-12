@@ -82,11 +82,11 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
 
 ## Orchestration
 
-├── airflow_project
-│   ├── dags
-│   │   └── dbt_dag.py
-│   ├── Dockerfile
-│   └── requirements.txt
+airflow_project/
+├── dags/
+│   └── dbt_dag.py
+├── Dockerfile
+└── requirements.txt
 
 - Airflow DAG:
 
