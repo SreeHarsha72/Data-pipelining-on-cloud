@@ -27,10 +27,9 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
     - DBT Installation:
        - Installed DBT Core using pip install dbt-core.
        - Configured DBT profiles to connect with Snowflake, specifying roles, schemas, and warehouses.
-
-Airflow Integration:
-- Initialized an Airflow project using Astronomer’s CLI.
-- Configured Docker and added dependencies for DBT and Snowflake.
+   - Airflow Integration:
+      - Initialized an Airflow project using Astronomer’s CLI.
+      - Configured Docker and added dependencies for DBT and Snowflake.
 
 2. DBT Project Structure
 
@@ -42,29 +41,28 @@ Airflow Integration:
 
 - Tests: Validated data integrity through generic and singular tests.
 
+
 3. Building and Running the Pipeline
 
-- Modeling and Transformation
-
-Source Tables:
+3.1 Source Tables:
 
 - Defined in Snowflake’s tpch dataset.
 
 - Validated primary and foreign keys through generic tests.
 
-Staging Models:
+3.2 Staging Models:
 
 - Extracted and cleaned raw data.
 
 - Standardized column names and generated surrogate keys.
 
-Mart Models:
+3.3 Mart Models:
 
 - Applied business logic for aggregation and transformation.
 
 - Built fact tables using dimensional modeling principles.
 
-Testing Framework
+3.4 Testing Framework
 
 - Generic Tests:
 
@@ -111,11 +109,11 @@ Testing Framework
 
 - Pipeline Execution Errors
 
-  - Issue: Incorrect Snowflake connection credentials in Airflow.
+  - Issue1: Incorrect Snowflake connection credentials in Airflow.
 
   - Resolution: Updated Airflow connection details for username, password, and account settings.
 
-  - Issue: Circular dependencies in DAG.
+  - Issue2: Circular dependencies in DAG.
 
   - Resolution: Reviewed and reordered DBT models to ensure no interdependencies.
 
