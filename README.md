@@ -68,8 +68,7 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
    - Singular Tests:
      - Verified custom business rules, such as ensuring non-negative discounts and valid date ranges.
 
-
-
+<br/>
 ## Orchestration
 
 - Airflow DAG:
