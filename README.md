@@ -20,6 +20,8 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
 - **Airflow**: For orchestration and automation of data pipelines.
 - **Astronomer Cosmos**: To run DBT projects within Airflow DAGs.
 
+![img] (img/workflow.png)
+
 ## Steps in the ELT Pipeline
 
 1. Environment Setup
