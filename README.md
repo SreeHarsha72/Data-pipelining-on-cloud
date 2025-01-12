@@ -38,14 +38,14 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
 2. DBT Project Structure
 
 ├── dbt_project <br/>
-│   ├── models <br/>
-│   │   ├── staging <br/>
-│   │   ├── marts <br/>
-│   │   └── tests <br/>
-│   ├── macros <br/>
-│   ├── snapshots <br/>
-│   ├── seeds <br/>
-│   └── dbt_project.yml <br/>
+│      ├── models <br/>
+│      │   ├── staging <br/>
+│      │   ├── marts <br/>
+│      │   └── tests <br/>
+│      ├── macros <br/>
+│      ├── snapshots <br/>
+│      ├── seeds <br/>
+│      └── dbt_project.yml <br/>
 
 - Staging Models: Contain one-to-one mappings to source tables, materialized as views.
 
@@ -82,11 +82,11 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
 
 ## Orchestration
 
-airflow_project/<br/>
+airflow_project/ <br/>
 ├── dags/<br/>
-│   └── dbt_dag.py<br/>
-├── Dockerfile<br/>
-└── requirements.txt<br/>
+│      └── dbt_dag.py <br/>
+├── Dockerfile <br/>
+└── requirements.txt <br/>
 
 - Airflow DAG:
 
