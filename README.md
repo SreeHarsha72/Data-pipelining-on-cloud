@@ -1,32 +1,34 @@
 # Data-pipelining-on-cloud
 
-### Project Overview
+## Project Overview
 
 This project demonstrates the implementation of a modern ELT (Extract, Load, Transform) pipeline leveraging cloud-based tools. The primary objective is to load raw data into Snowflake, transform it using DBT, and orchestrate the pipeline using Airflow. This repository provides an overview of the steps, components, and error-handling strategies utilized in the project.
 
-### Conceptual Background
+## Conceptual Background
 
-**ETL** (Extract, Transform, Load): Historically optimized for high storage costs by transforming data before loading it into the data warehouse.
-**ELT** (Extract, Load, Transform): Modern approach enabled by cost-effective storage solutions like Snowflake, allowing raw data to be loaded first and transformed later.
+- **ETL** (Extract, Transform, Load): Historically optimized for high storage costs by transforming data before loading it into the data warehouse.
+- **ELT** (Extract, Load, Transform): Modern approach enabled by cost-effective storage solutions like Snowflake, allowing raw data to be loaded first and transformed later.
 
 
-### Tools Used
+## Tools Used
 
-**Snowflake**: Cloud-based data warehousing.
-**DBT Core**: For transforming and modeling data.
-**Airflow**: For orchestration and automation of data pipelines.
-**Astronomer Cosmos**: To run DBT projects within Airflow DAGs.
+- **Snowflake**: Cloud-based data warehousing.
+- **DBT Core**: For transforming and modeling data.
+- **Airflow**: For orchestration and automation of data pipelines.
+- **Astronomer Cosmos**: To run DBT projects within Airflow DAGs.
 
-### Steps in the ELT Pipeline
+## Steps in the ELT Pipeline
 
 1. Environment Setup
    - Snowflake Configuration:
      - Created a warehouse (DBT Warehouse), database (DBT DB), schema (DBT Schema), and role (DBT Role).
      - Assigned permissions for the role to access the warehouse and database.
      - Verified setup using Snowflake’s UI and SQL queries.
+       
     - DBT Installation:
        - Installed DBT Core using pip install dbt-core.
        - Configured DBT profiles to connect with Snowflake, specifying roles, schemas, and warehouses.
+         
    - Airflow Integration:
       - Initialized an Airflow project using Astronomer’s CLI.
       - Configured Docker and added dependencies for DBT and Snowflake.
@@ -44,36 +46,26 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
 
 3. Building and Running the Pipeline
 
-3.1 Source Tables:
+   3.1 Source Tables:
+   - Defined in Snowflake’s tpch dataset.
+   - Validated primary and foreign keys through generic tests.
 
-- Defined in Snowflake’s tpch dataset.
+   3.2 Staging Models:
+   - Extracted and cleaned raw data.
+   - Standardized column names and generated surrogate keys.
 
-- Validated primary and foreign keys through generic tests.
+   3.3 Mart Models:
+   - Applied business logic for aggregation and transformation.
+   - - Built fact tables using dimensional modeling principles.
 
-3.2 Staging Models:
+   3.4 Testing Framework
+   - Generic Tests:
+     - Validated uniqueness and null constraints for primary keys.
+     - Checked acceptable values for specific columns.
+   - Singular Tests:
+     - Verified custom business rules, such as ensuring non-negative discounts and valid date ranges.
 
-- Extracted and cleaned raw data.
-
-- Standardized column names and generated surrogate keys.
-
-3.3 Mart Models:
-
-- Applied business logic for aggregation and transformation.
-
-- Built fact tables using dimensional modeling principles.
-
-3.4 Testing Framework
-
-- Generic Tests:
-
-  - Validated uniqueness and null constraints for primary keys.
-
-  - Checked acceptable values for specific columns.
-
-- Singular Tests:
- - Verified custom business rules, such as ensuring non-negative discounts and valid date ranges.
-
-4. Orchestration
+## Orchestration
 
 - Airflow DAG:
 
@@ -89,7 +81,7 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
 
   - Verified successful runs by checking outputs in Snowflake.
 
-5. Error Handling Strategies
+## Error Handling Strategies
 
 - Snowflake Configuration Errors
 
