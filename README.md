@@ -72,7 +72,7 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
 
    3.3 Mart Models:
    - Applied business logic for aggregation and transformation.
-   - Built fact tables using dimensional modeling principles.
+   - Built fact tables using dimensional modeling principles. (Ref: https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/)
 
    3.4 Testing Framework
    - Generic Tests:
