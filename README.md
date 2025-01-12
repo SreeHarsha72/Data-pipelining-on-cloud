@@ -33,6 +33,8 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
       - Initialized an Airflow project using Astronomer’s CLI.
       - Configured Docker and added dependencies for DBT and Snowflake.
 
+      
+
 2. DBT Project Structure
 
 - Staging Models: Contain one-to-one mappings to source tables, materialized as views.
@@ -42,6 +44,7 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
 - Macros: Reusable functions for common business logic.
 
 - Tests: Validated data integrity through generic and singular tests.
+
 
 
 3. Building and Running the Pipeline
@@ -65,6 +68,8 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
    - Singular Tests:
      - Verified custom business rules, such as ensuring non-negative discounts and valid date ranges.
 
+
+
 ## Orchestration
 
 - Airflow DAG:
@@ -80,6 +85,8 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
   - Visualized DAG dependencies and monitored execution through Airflow’s UI.
 
   - Verified successful runs by checking outputs in Snowflake.
+
+
 
 ## Error Handling Strategies
 
