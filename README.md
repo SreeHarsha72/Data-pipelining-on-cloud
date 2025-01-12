@@ -37,15 +37,15 @@ This project demonstrates the implementation of a modern ELT (Extract, Load, Tra
 
 2. DBT Project Structure
 
-├── dbt_project
-│   ├── models
-│   │   ├── staging
-│   │   ├── marts
-│   │   └── tests
-│   ├── macros
-│   ├── snapshots
-│   ├── seeds
-│   └── dbt_project.yml
+├── dbt_project <br/>
+│   ├── models <br/>
+│   │   ├── staging <br/>
+│   │   ├── marts <br/>
+│   │   └── tests <br/>
+│   ├── macros <br/>
+│   ├── snapshots <br/>
+│   ├── seeds <br/>
+│   └── dbt_project.yml <br/>
 
 - Staging Models: Contain one-to-one mappings to source tables, materialized as views.
 
