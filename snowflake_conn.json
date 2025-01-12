@@ -1,0 +1,7 @@
+{
+    "account": "<account_locator>-<account_name>",
+    "warehouse": "dbt_wh",
+    "database": "dbt_db",
+    "role": "dbt_role",
+    "insecure_mode": false
+  }
